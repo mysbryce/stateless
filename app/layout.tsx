@@ -4,6 +4,7 @@ import { Inter, Noto_Sans_Thai } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import Head from "next/head"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 const notoSansThai = Noto_Sans_Thai({
@@ -13,7 +14,7 @@ const notoSansThai = Noto_Sans_Thai({
 })
 
 export const metadata = {
-  metadataBase: new URL("https://stateless.vercel.app"),
+  metadataBase: new URL("https://stateless-prt.vercel.app"),
   title: {
     default: "Stateless Portfolio | Full Stack Developer",
     template: "%s | Stateless Portfolio"
@@ -23,7 +24,7 @@ export const metadata = {
   applicationName: "Stateless Portfolio",
   referrer: "origin-when-cross-origin",
   keywords: ["Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Web Development", "Frontend Developer", "Portfolio", "Hire Developer"],
-  authors: [{ name: "Stateless", url: "https://stateless.vercel.app" }],
+  authors: [{ name: "Stateless", url: "https://stateless-prt.vercel.app" }],
   creator: "Stateless",
   publisher: "Stateless",
   formatDetection: {
@@ -34,7 +35,7 @@ export const metadata = {
   openGraph: {
     title: "Stateless Portfolio | Full Stack Developer",
     description: "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript. View my projects and get in touch for collaboration opportunities.",
-    url: "https://stateless.vercel.app",
+    url: "https://stateless-prt.vercel.app",
     siteName: "Stateless Portfolio",
     locale: "en_US",
     type: "website",
@@ -75,10 +76,10 @@ export const metadata = {
   ],
   category: "technology",
   alternates: {
-    canonical: "https://stateless.vercel.app",
+    canonical: "https://stateless-prt.vercel.app",
     languages: {
-      'en-US': 'https://stateless.vercel.app/en-US',
-      'th-TH': 'https://stateless.vercel.app/th-TH',
+      'en-US': 'https://stateless-prt.vercel.app/en-US',
+      'th-TH': 'https://stateless-prt.vercel.app/th-TH',
     },
   },
 }
@@ -103,12 +104,12 @@ export default function RootLayout({
             {
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://stateless.vercel.app/#person",
+              "@id": "https://stateless-prt.vercel.app/#about",
               "name": "Stateless",
-              "url": "https://stateless.vercel.app",
+              "url": "https://stateless-prt.vercel.app",
               "sameAs": [
                 "https://github.com/mysbryce",
-                "https://stateless.vercel.app"
+                "https://stateless-prt.vercel.app"
               ],
               "jobTitle": "Full Stack Developer",
               "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js"],
@@ -125,16 +126,18 @@ export default function RootLayout({
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://stateless.vercel.app/#website",
-              "url": "https://stateless.vercel.app",
+              "@id": "https://stateless-prt.vercel.app/#about",
+              "url": "https://stateless-prt.vercel.app",
               "name": "Stateless Portfolio",
               "description": "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript.",
               "publisher": {
-                "@id": "https://stateless.vercel.app/#about"
+                "@id": "https://stateless-prt.vercel.app/#about"
               }
             }
           `}
         </Script>
+
+        <Analytics />
       </body>
     </html>
   )
