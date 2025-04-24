@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, FolderOpen, Github, Mail, Terminal, User } from "lucide-react"
+import { ExternalLink, FolderOpen, Github, Mail, Terminal, User, Home, CircuitBoard, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -135,19 +135,24 @@ export default function Portfolio() {
             </span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="#home" className="hover:text-purple-500 transition-colors">
+            <Link href="#home" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
+              <Home className="h-4 w-4" />
               Home
             </Link>
-            <Link href="#about" className="hover:text-purple-500 transition-colors">
+            <Link href="#about" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
+              <User className="h-4 w-4" />
               About Me
             </Link>
-            <Link href="#projects" className="hover:text-purple-500 transition-colors">
+            <Link href="#projects" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
+              <FolderOpen className="h-4 w-4" />
               Projects
             </Link>
-            <Link href="#skills" className="hover:text-purple-500 transition-colors">
+            <Link href="#skills" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
+              <Wrench className="h-4 w-4" />
               Skills
             </Link>
-            <Link href="#contact" className="hover:text-purple-500 transition-colors">
+            <Link href="#contact" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
+              <Mail className="h-4 w-4" />
               Contact
             </Link>
           </nav>
