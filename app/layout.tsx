@@ -114,7 +114,7 @@ export default function RootLayout({
               "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js"],
               "worksFor": {
                 "@type": "Organization",
-                "name": "Stateless"
+                "name": "Meta Script Collective"
               }
             }
           `}
