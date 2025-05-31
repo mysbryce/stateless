@@ -1,16 +1,15 @@
 import type React from "react"
 import "./globals.css"
-import { Inter, Noto_Sans_Thai } from "next/font/google"
+import { IBM_Plex_Sans_Thai } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Script from "next/script"
 import Head from "next/head"
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ["latin"] })
-const notoSansThai = Noto_Sans_Thai({
+const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["thai", "latin"],
-  variable: "--font-noto-sans-thai",
+  variable: "--font-ibm-plex-sans-thai",
 })
 
 export const metadata = {
@@ -94,7 +93,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body className={`${inter.className} ${notoSansThai.variable}`}>
+      <body className={`${ibmPlexSansThai.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

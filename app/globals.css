@@ -25,10 +25,11 @@
 }
 
 body {
-  background-color: black;
+  background: #200930;
+  background: radial-gradient(circle,rgb(11, 3, 17) 38%, rgba(0, 0, 0, 1) 100%);
   color: white;
 }
 
-.font-noto-sans-thai {
-  font-family: "Noto Sans Thai", sans-serif;
+.font-ibm-plex-sans-thai {
+  font-family: "IBM Plex Sans Thai", sans-serif;
 }

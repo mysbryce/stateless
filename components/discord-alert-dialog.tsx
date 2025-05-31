@@ -24,7 +24,7 @@ export function DiscordAlertDialog({ children }: DiscordAlertDialogProps) {
         <>
             <Button
                 variant="outline"
-                className="border-zinc-700 hover:bg-zinc-800"
+                className="border-zinc-700 hover:bg-zinc-800 rounded-xl"
                 onClick={() => setOpen(true)}
             >
                 {children}

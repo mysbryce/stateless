@@ -124,24 +124,20 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-noto-sans-thai">
+    <div className="min-h-screen text-white font-ibm-plex-sans-thai">
       {/* Header */}
       <header className="border-b border-zinc-800 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Terminal className="h-6 w-6 text-purple-500" />
             <span className="font-bold text-xl">
-              State<span className="text-purple-500">less</span>
+              State<span className="text-purple-500">less</span> (999s)
             </span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#home" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
               <Home className="h-4 w-4" />
               Home
-            </Link>
-            <Link href="#about" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
-              <User className="h-4 w-4" />
-              About Me
             </Link>
             <Link href="#projects" className="hover:text-purple-500 transition-colors text-sm flex items-center gap-2">
               <FolderOpen className="h-4 w-4" />
@@ -156,7 +152,7 @@ export default function Portfolio() {
               Contact
             </Link>
           </nav>
-          <Button asChild variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-500/10">
+          <Button asChild variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-500/30 rounded-xl">
             <Link href="#contact">
               <Mail className="mr-2 h-4 w-4" /> Contact
             </Link>
@@ -168,7 +164,7 @@ export default function Portfolio() {
       <section id="home" className="py-20 border-b border-zinc-800">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <div className="inline-block px-3 py-1 bg-purple-500/10 text-purple-500 rounded-full text-sm">
+            <div className="inline-block px-3 py-1 bg-purple-500/20 text-purple-500 rounded-full text-sm">
               Full Stack Developer
             </div>
             <h1 className="text-4xl md:text-6xl font-bold">
@@ -178,7 +174,7 @@ export default function Portfolio() {
               I am a Full Stack web developer with expertise in building efficient and visually appealing applications. I also specialize in creating FiveM resources and have a wide range of additional skills.
             </p>
             <div className="flex gap-4">
-              <Button className="bg-purple-500 hover:bg-purple-600">
+              <Button className="bg-purple-500 hover:bg-purple-600 rounded-xl">
                 <Link href="#projects" className="flex items-center gap-2">
                   <FolderOpen className="h-4 w-4" />
                   My Projects
@@ -199,68 +195,36 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-red-500 rounded-lg blur opacity-30"></div>
-            <div className="relative bg-zinc-900 p-6 rounded-lg border border-zinc-800">
+            <div className="absolute inset-0 h-full w-full rounded-xl bg-zinc-900 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div className="relative p-6 rounded-xl border border-zinc-800">
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                <div className="h-2 w-2 rounded-full bg-white/20"></div>
+                <div className="h-2 w-2 rounded-full bg-white/20"></div>
+                <div className="h-2 w-2 rounded-full bg-white/20"></div>
                 <div className="ml-2 text-sm text-zinc-400">terminal</div>
               </div>
               <pre className="font-mono text-sm">
                 <code className="text-zinc-300">
-                  <span className="text-purple-500">user@portfolio</span>:<span className="text-blue-400">~</span>$
+                  <span className="text-purple-500">999s@portfolio</span>:<span className="text-blue-400">~</span>$
                     whoami
                   <br />
-                  <span className="text-yellow-300">{">"} Full Stack Developer</span>
+                  <span className="text-zinc-100">{">"} Full Stack Developer</span>
                   <br />
                   <br />
-                  <span className="text-purple-500">user@portfolio</span>:<span className="text-blue-400">~</span>$ ls
+                  <span className="text-purple-500">999s@portfolio</span>:<span className="text-blue-400">~</span>$ ls
                     skills
                   <br />
-                  <span className="text-yellow-300">{">"} React.js Next.js Node.js TypeScript</span>
+                  <span className="text-zinc-100">{">"} React.js Next.js Node.js TypeScript</span>
                   <br />
                   <br />
-                  <span className="text-purple-500">user@portfolio</span>:<span className="text-blue-400">~</span>$
+                  <span className="text-purple-500">999s@portfolio</span>:<span className="text-blue-400">~</span>$
                     contact --send
                   <br />
-                  <span className="text-yellow-300">{">"} Sending message...</span>
+                  <span className="text-zinc-100">{">"} Sending message...</span>
                   <br />
-                  <span className="text-green-400">{">"} Ready to collaborate!</span>
+                  <span className="text-zinc-50">{">"} Ready to collaborate!</span>
                 </code>
               </pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 border-b border-zinc-800">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 mb-12">
-            <User className="h-6 w-6 text-purple-500" />
-            <h2 className="text-3xl font-bold">About me</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 border border-zinc-700 rounded-xl"></div>
-              <Image
-                src="/profile.jpg"
-                alt="Profile"
-                width={400}
-                height={400}
-                className="rounded-xl object-cover"
-              />
-            </div>
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold">A Developer Passionate About Creation</h3>
-              <p className="text-zinc-400">
-                I am a Full Stack web developer with over 8 years of experience in developing efficient and beautiful web applications.
-                I specialize in using the latest technologies such as React, Next.js, Node.js, and TypeScript.
-              </p>
-              <p className="text-zinc-400">
-                I enjoy solving complex problems and creating the best user experiences. I believe good code should be readable, efficient, and maintainable.
-              </p>
             </div>
           </div>
         </div>
@@ -288,7 +252,7 @@ export default function Portfolio() {
                     </div>
                     <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-purple-500 to-red-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"
                         style={{ width: `${talentValues[skill]}%` }}
                       ></div>
                     </div>
@@ -362,7 +326,7 @@ export default function Portfolio() {
                     type="text"
                     value={formData.discordId}
                     onChange={handleInputChange}
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:ring-purple-500"
+                    className="w-full bg-zinc-800 border border-zinc-700 px-4 py-2 focus:outline-none focus:ring-purple-500 rounded-xl"
                   />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -375,7 +339,7 @@ export default function Portfolio() {
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:ring-purple-500"
+                      className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2 focus:outline-none focus:ring-purple-500"
                     />
                   </div>
                   <div className="space-y-2">
@@ -387,7 +351,7 @@ export default function Portfolio() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:ring-purple-500"
+                      className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2 focus:outline-none focus:ring-purple-500"
                       required
                     />
                   </div>
@@ -401,7 +365,7 @@ export default function Portfolio() {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:ring-purple-500"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2 focus:outline-none focus:ring-purple-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -413,13 +377,13 @@ export default function Portfolio() {
                     rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:ring-purple-500"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2 focus:outline-none focus:ring-purple-500"
                     required
                   ></textarea>
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-purple-500 hover:bg-purple-600"
+                  className="w-full bg-purple-500 hover:bg-purple-600 rounded-xl"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Submit"}
