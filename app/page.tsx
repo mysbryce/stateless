@@ -266,12 +266,13 @@ export default function Portfolio() {
                 {["VS Code", "Git", "GitHub", "Figma"].map((tool) => (
                   <div
                     key={tool}
-                    className="bg-zinc-900 border border-zinc-800 rounded-lg p-4 flex flex-col items-center justify-center text-center"
+                    className="bg-zinc-900 border border-zinc-800 rounded-3xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden"
                   >
-                    <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mb-2">
+                    <div className="absolute z-0 inset-0 h-full w-full rounded-xl bg-zinc-900 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                    <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mb-2 relative z-10">
                       <Terminal className="h-6 w-6 text-purple-500" />
                     </div>
-                    <span>{tool}</span>
+                    <span className="relative z-10">{tool}</span>
                   </div>
                 ))}
               </div>
@@ -314,9 +315,10 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-6">Send me a message</h3>
-              <form className="space-y-4" onSubmit={handleSubmit}>
+            <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl relative overflow-hidden">
+              <div className="absolute z-0 inset-0 h-full w-full rounded-xl bg-zinc-900 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+              <h3 className="text-xl font-bold mb-6 relative z-10">Send me a message</h3>
+              <form className="space-y-4 relative z-10" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm text-zinc-400">
                     Discord ID
