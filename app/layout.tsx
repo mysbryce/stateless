@@ -3,6 +3,7 @@ import { Anuphan, Poppins } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Head from "next/head";
 
 const fontAnuphan = Anuphan({
@@ -141,6 +142,7 @@ export default function RootLayout({
         </Script>
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
