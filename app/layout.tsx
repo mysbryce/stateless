@@ -1,41 +1,45 @@
-import type React from "react"
-import "./globals.css"
-import { IBM_Plex_Sans_Thai } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import Script from "next/script"
-import Head from "next/head"
-import { Analytics } from "@vercel/analytics/react"
+import type { Metadata } from "next";
+import { Anuphan, Poppins } from "next/font/google";
+import "./globals.css";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
-const ibmPlexSansThai = IBM_Plex_Sans_Thai({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["thai", "latin"],
-  variable: "--font-ibm-plex-sans-thai",
-})
+const fontAnuphan = Anuphan({
+  variable: "--font-anuphan",
+  subsets: ["latin", "thai"],
+});
 
-export const metadata = {
+const fontPoppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+});
+
+export const metadata: Metadata = {
   metadataBase: new URL("https://stateless-prt.vercel.app"),
   title: {
-    default: "Stateless Portfolio | Full Stack Developer",
-    template: "%s | Stateless Portfolio"
+    default: "999s Portfolio | Full Stack Developer",
+    template: "%s | 999s Portfolio"
   },
   description: "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript. View my projects and get in touch for collaboration opportunities.",
-  generator: "stateless.dev",
-  applicationName: "Stateless Portfolio",
+  generator: "999s.dev",
+  applicationName: "999s Portfolio",
   referrer: "origin-when-cross-origin",
   keywords: ["Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Web Development", "Frontend Developer", "Portfolio", "Hire Developer"],
-  authors: [{ name: "Stateless", url: "https://stateless-prt.vercel.app" }],
-  creator: "Stateless",
-  publisher: "Stateless",
+  authors: [{ name: "999s", url: "https://stateless-prt.vercel.app" }],
+  creator: "999s",
+  publisher: "999s",
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
   },
   openGraph: {
-    title: "Stateless Portfolio | Full Stack Developer",
+    title: "999s Portfolio | Full Stack Developer",
     description: "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript. View my projects and get in touch for collaboration opportunities.",
     url: "https://stateless-prt.vercel.app",
-    siteName: "Stateless Portfolio",
+    siteName: "999s Portfolio",
     locale: "en_US",
     type: "website",
     images: [
@@ -43,7 +47,7 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Stateless Portfolio Preview",
+        alt: "999s Portfolio Preview",
       },
     ],
   },
@@ -60,7 +64,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stateless Portfolio | Full Stack Developer",
+    title: "999s Portfolio | Full Stack Developer",
     description: "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript. View my projects and get in touch for collaboration opportunities.",
     images: ["/twitter-image.jpg"],
   },
@@ -72,7 +76,7 @@ export const metadata = {
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-  ],
+  ], 
   category: "technology",
   alternates: {
     canonical: "https://stateless-prt.vercel.app",
@@ -81,22 +85,22 @@ export const metadata = {
       'th-TH': 'https://stateless-prt.vercel.app/th-TH',
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body className={`${ibmPlexSansThai.variable}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+      <body
+        className={`${fontPoppins.className} ${fontAnuphan.className} bg-base-200 antialiased min-h-screen`}
+      >
+        {children}
 
         <Script id="schema-person" type="application/ld+json">
           {`
@@ -104,7 +108,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "@id": "https://stateless-prt.vercel.app/#about",
-              "name": "Stateless",
+              "name": "999s",
               "url": "https://stateless-prt.vercel.app",
               "sameAs": [
                 "https://github.com/mysbryce",
@@ -139,5 +143,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
