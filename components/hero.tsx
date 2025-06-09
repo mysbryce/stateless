@@ -21,10 +21,10 @@ export default function Hero() {
                     <span className="text-orange-700">MSC FiveM.</span>
                     <div className="flex items-center gap-2 border-2 border-zinc-300 rounded-4xl px-6 py-3 ml-0 md:ml-4 font-medium">
                         <div className="flex items-center justify-center">
-                            <span className="block w-[12px] aspect-square bg-emerald-400 rounded-full"></span>
-                            <span className="absolute block w-[12px] aspect-square bg-emerald-400 rounded-full animate-ping"></span>
+                            <span className="block w-[12px] aspect-square bg-orange-400 rounded-full"></span>
+                            <span className="absolute block w-[12px] aspect-square bg-orange-400 rounded-full animate-ping"></span>
                         </div>
-                        <span className="text-base">Open to work</span>
+                        <span className="text-base">Busy Busy</span>
                     </div>
                 </div>
             </div>
