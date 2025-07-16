@@ -46,12 +46,6 @@ export default function Navbar() {
                         <li>
                             <a onClick={() => window.open('https://github.com/mysbryce', '_blank')?.focus()}>Github</a>
                         </li>
-                        <li>
-                            <a onClick={() => window.open('https://msc-fivem.shop/', '_blank')?.focus()}>MSC Store</a>
-                        </li>
-                        <li>
-                            <a onClick={() => window.open('https://docs.msc-fivem.shop/', '_blank')?.focus()}>MSC Docs</a>
-                        </li>
                     </ul>
                 </div>
             </div>
