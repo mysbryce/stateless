@@ -9,7 +9,7 @@ export default function Navbar() {
                 <a href="mailto:fx.frame009@gmail.com" target="_blank" className="flex items-center gap-2 text-xl">
                     <Logo />
 
-                    <span className="text-base underline">
+                    <span className="hidden md:inline-block text-base underline">
                         fx.frame009@gmail.com
                     </span>
                 </a>
