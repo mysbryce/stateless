@@ -30,7 +30,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-start gap-4 mt-1 md:mt-6">
+            <div className="flex items-center justify-center flex-wrap md:justify-start gap-4 mt-1 md:mt-6">
                 <Link href="https://webring.wonderful.software#stateless-prt.vercel.app" title="วงแหวนเว็บ" target="_blank" className="btn btn-lg rounded-xl btn-square">
                     <Image
                         alt="วงแหวนเว็บ"
