@@ -6,8 +6,7 @@ import Projects from "@/components/projects"
 
 export default function Home() {
     return (
-        <main className="flex flex-col w-[900px] max-w-[80vw] mx-auto pt-6 pb-10">
-            <Navbar />
+        <main className="flex flex-col max-w-4xl mx-auto pt-6 pb-10">
             <Hero />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-14">

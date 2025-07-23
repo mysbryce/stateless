@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Head from "next/head";
+import Navbar from "@/components/navbar";
 
 const fontAnuphan = Anuphan({
   variable: "--font-anuphan",
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-  ], 
+  ],
   category: "technology",
   alternates: {
     canonical: "https://stateless-prt.vercel.app",
@@ -101,6 +102,9 @@ export default function RootLayout({
       <body
         className={`${fontPoppins.className} ${fontAnuphan.className} bg-base-200 antialiased min-h-screen`}
       >
+        <div className="max-w-4xl mx-auto pt-6">
+          <Navbar />
+        </div>
         {children}
 
         <Script id="schema-person" type="application/ld+json">
@@ -124,7 +128,7 @@ export default function RootLayout({
             }
           `}
         </Script>
-        
+
         <Script id="schema-website" type="application/ld+json">
           {`
             {

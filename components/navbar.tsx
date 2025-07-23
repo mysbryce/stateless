@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import Logo from "./logo"
 
 export default function Navbar() {
@@ -38,7 +39,10 @@ export default function Navbar() {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                     >
                         <li>
-                            <a onClick={() => window.open('https://stateless-prt.vercel.app/', '_blank')?.focus()}>Portfolio</a>
+                            <Link href="/resume">Resume</Link>
+                        </li>
+                        <li>
+                            <Link href="/">Portfolio</Link>
                         </li>
                         <li>
                             <a onClick={() => window.open('https://discord.com/users/723157846635839499', '_blank')?.focus()}>Discord</a>
