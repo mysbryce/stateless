@@ -1,13 +1,6 @@
-import Navbar from "@/components/navbar";
 import React from "react"
 
 const Resume = () => {
-  const skills = [
-    "HTML", "CSS", "JavaScript", "Lua", "PHP", "Node.js",
-    "Python", "React.js", "Next.js", "MySQL", "MariaDB",
-    "MongoDB", "PostgreSQL"
-  ]
-
   const experiences = [
     { title: "Freelancer & Grand City", period: "Now - WFH Fulltime", type: "current" },
     { title: "Freelancer & MSC Shop (FiveM)", period: "2025 - WFH Fulltime", type: "recent" },
@@ -15,13 +8,13 @@ const Resume = () => {
     { title: "Do My Own FiveM Store", period: "2023 - WFH Fulltime", type: "past" },
     { title: "Funny Production", period: "2022 - WFH Fulltime", type: "past" },
     { title: "Do My Own FiveM Store", period: "2021 - WFH Fulltime", type: "past" }
-  ];
+  ]
 
   const projects = [
     { name: "Portfolio Website", tech: "Next.js, Tailwind CSS", description: "Personal portfolio showcasing projects and experience" },
     { name: "FiveM Store Platform", tech: "React.js, Node.js, MySQL", description: "E-commerce platform for FiveM gaming community" },
     { name: "Grand City Management", tech: "PHP, MySQL, JavaScript", description: "City management system for roleplay server" }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-base-200 py-8 px-4">
