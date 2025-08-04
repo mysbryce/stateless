@@ -1,25 +1,28 @@
-import type { Metadata } from "next";
-import { Anuphan, Poppins } from "next/font/google";
-import "./globals.css";
-import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next"
+import { GoogleTagManager } from "@next/third-parties/google"
+import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Head from "next/head";
-import Navbar from "@/components/navbar";
+
+import Head from "next/head"
+import Script from "next/script"
+import Navbar from "@/components/navbar"
+
+import { Anuphan, Poppins } from "next/font/google"
+import "./globals.css"
 
 const fontAnuphan = Anuphan({
   variable: "--font-anuphan",
   subsets: ["latin", "thai"],
-});
+})
 
 const fontPoppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
-});
+})
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stateless-prt.vercel.app"),
+  metadataBase: new URL("https://portfolio.e2ends.xyz"),
   title: {
     default: "999s Portfolio | Full Stack Developer",
     template: "%s | 999s Portfolio"
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
   applicationName: "999s Portfolio",
   referrer: "origin-when-cross-origin",
   keywords: ["Full Stack Developer", "React Developer", "Next.js Developer", "TypeScript Developer", "Web Development", "Frontend Developer", "Portfolio", "Hire Developer"],
-  authors: [{ name: "999s", url: "https://stateless-prt.vercel.app" }],
+  authors: [{ name: "999s", url: "https://portfolio.e2ends.xyz" }],
   creator: "999s",
   publisher: "999s",
   formatDetection: {
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "999s Portfolio | Full Stack Developer",
     description: "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript. View my projects and get in touch for collaboration opportunities.",
-    url: "https://stateless-prt.vercel.app",
+    url: "https://portfolio.e2ends.xyz",
     siteName: "999s Portfolio",
     locale: "en_US",
     type: "website",
@@ -81,13 +84,13 @@ export const metadata: Metadata = {
   ],
   category: "technology",
   alternates: {
-    canonical: "https://stateless-prt.vercel.app",
+    canonical: "https://portfolio.e2ends.xyz",
     languages: {
-      'en-US': 'https://stateless-prt.vercel.app/en-US',
-      'th-TH': 'https://stateless-prt.vercel.app/th-TH',
+      'en-US': 'https://portfolio.e2ends.xyz/en-US',
+      'th-TH': 'https://portfolio.e2ends.xyz/th-TH',
     },
   },
-};
+}
 
 export default function RootLayout({
   children,
@@ -99,6 +102,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
+      <GoogleTagManager gtmId="GTM-WCDNW3G5" />
       <body
         className={`${fontPoppins.className} ${fontAnuphan.className} bg-base-200 antialiased min-h-screen`}
       >
@@ -112,12 +116,12 @@ export default function RootLayout({
             {
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://stateless-prt.vercel.app/#about",
+              "@id": "https://portfolio.e2ends.xyz/#about",
               "name": "999s",
-              "url": "https://stateless-prt.vercel.app",
+              "url": "https://portfolio.e2ends.xyz",
               "sameAs": [
                 "https://github.com/mysbryce",
-                "https://stateless-prt.vercel.app"
+                "https://portfolio.e2ends.xyz"
               ],
               "jobTitle": "Full Stack Developer",
               "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js"],
@@ -134,12 +138,12 @@ export default function RootLayout({
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "@id": "https://stateless-prt.vercel.app/#about",
-              "url": "https://stateless-prt.vercel.app",
+              "@id": "https://portfolio.e2ends.xyz/#about",
+              "url": "https://portfolio.e2ends.xyz",
               "name": "Stateless Portfolio",
               "description": "Expert full stack developer specializing in React, Next.js, Node.js and TypeScript.",
               "publisher": {
-                "@id": "https://stateless-prt.vercel.app/#about"
+                "@id": "https://portfolio.e2ends.xyz/#about"
               }
             }
           `}
@@ -149,5 +153,5 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }
