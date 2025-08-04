@@ -1,6 +1,5 @@
 import Experience from "@/components/experience"
 import Hero from "@/components/hero"
-import Navbar from "@/components/navbar"
 import Playlist from "@/components/playlist"
 import Projects from "@/components/projects"
 
